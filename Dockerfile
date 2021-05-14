@@ -7,4 +7,5 @@ COPY /server/go.mod .
 RUN go mod download 
 ADD /server /app/server
 RUN go build main.go
+EXPOSE 8000
 CMD ["go","run", "main.go"]
